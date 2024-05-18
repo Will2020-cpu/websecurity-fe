@@ -104,7 +104,7 @@ const entryServer = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineP
   __proto__: null,
   default: handleRequest
 }, Symbol.toStringTag, { value: "Module" }));
-const stylesheet = "/websecurity-fe/assets/tailwind-Sz05Z6RV.css";
+const stylesheet = "/assets/tailwind-Sz05Z6RV.css";
 function Layout({ children }) {
   return /* @__PURE__ */ jsxs("html", { lang: "en", children: [
     /* @__PURE__ */ jsxs("head", { children: [
@@ -132,7 +132,7 @@ const route0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: App,
   links
 }, Symbol.toStringTag, { value: "Module" }));
-const logo = "/websecurity-fe/website-scanner.svg";
+const logo = "/website-scanner.svg";
 const site = [
   {
     "@name": "https://example.com",
@@ -406,11 +406,13 @@ const UseFetchPost = () => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   async function fetchPost(url = "", data) {
+    setResponse(null);
     fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": "true"
       }
     }).then((res) => res.json()).then((res) => {
       console.log(res);
@@ -498,7 +500,7 @@ function Result({ response }) {
     }
   }
   return /* @__PURE__ */ jsxs("main", { children: [
-    /* @__PURE__ */ jsx("h1", { className: "text-white text-2xl font-medium", children: "Alerts" }),
+    /* @__PURE__ */ jsx("h1", { className: "text-white text-2xl font-medium", children: "Alertas" }),
     response ? /* @__PURE__ */ jsx("div", { className: "flex flex-col w-full gap-3", children: /* @__PURE__ */ jsx("div", { children: response.site.map((item) => /* @__PURE__ */ jsx(
       "div",
       {
@@ -584,6 +586,7 @@ function Index() {
           {
             type: "url",
             id: "url",
+            required: true,
             "aria-describedby": "helper-text-explanation",
             className: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
             placeholder: "htps://url.com",
@@ -617,13 +620,13 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: Index,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/websecurity-fe/assets/entry.client-DyGy8crD.js", "imports": ["/websecurity-fe/assets/index-BL1rH8C1.js", "/websecurity-fe/assets/components-8S1QC4Ew.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/websecurity-fe/assets/root-ddvifx2a.js", "imports": ["/websecurity-fe/assets/index-BL1rH8C1.js", "/websecurity-fe/assets/components-8S1QC4Ew.js"], "css": [] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/websecurity-fe/assets/_index-B1E_S-AY.js", "imports": ["/websecurity-fe/assets/index-BL1rH8C1.js"], "css": [] } }, "url": "/websecurity-fe/assets/manifest-1356a8b9.js", "version": "1356a8b9" };
+const serverManifest = { "entry": { "module": "/assets/entry.client-bQwDtWjH.js", "imports": ["/assets/index-BL1rH8C1.js", "/assets/components-DG95zyRV.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-B2CFtcPJ.js", "imports": ["/assets/index-BL1rH8C1.js", "/assets/components-DG95zyRV.js"], "css": [] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-BWNVyC7S.js", "imports": ["/assets/index-BL1rH8C1.js"], "css": [] } }, "url": "/assets/manifest-d83bf226.js", "version": "d83bf226" };
 const mode = "production";
 const assetsBuildDirectory = "build/client";
 const basename = "/";
 const future = { "v3_fetcherPersist": false, "v3_relativeSplatPath": false, "v3_throwAbortReason": false, "unstable_singleFetch": false };
 const isSpaMode = false;
-const publicPath = "/websecurity-fe/";
+const publicPath = "/";
 const entry = { module: entryServer };
 const routes = {
   "root": {
