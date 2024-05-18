@@ -32,7 +32,7 @@ export default function Result({ response }: Props) {
 
   return (
     <main>
-      <h1 className="text-white text-2xl font-medium">Alerts</h1>
+      <h1 className="text-white text-2xl font-medium">Alertas</h1>
       {response ? (
         <div className="flex flex-col w-full gap-3">
           <div>

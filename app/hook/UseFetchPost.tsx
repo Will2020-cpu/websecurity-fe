@@ -6,11 +6,13 @@ const UseFetchPost = <T, E>() => {
   const [error, setError] = useState<E | null>(null);
 
   async function fetchPost(url: string = "", data: any) {
+    setResponse(null);
     fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials":"true"
       },
     })
       .then((res) => res.json())

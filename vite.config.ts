@@ -6,6 +6,5 @@ import tsconfigPaths from "vite-tsconfig-paths";
 installGlobals();
 
 export default defineConfig({
-  plugins: [remix(), tsconfigPaths()],
-  base: "/websecurity-fe/"
+  plugins: [remix(), tsconfigPaths()]
 });
