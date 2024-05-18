@@ -7,5 +7,5 @@ installGlobals();
 
 export default defineConfig({
   plugins: [remix(), tsconfigPaths()],
-  base: "/websecurity-fe"
+  base: "/websecurity-fe/"
 });
