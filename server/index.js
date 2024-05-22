@@ -562,7 +562,7 @@ function Result({ response }) {
 }
 const meta = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Websecurity" },
     { name: "description", content: "Welcome to Remix!" }
   ];
 };
@@ -590,7 +590,7 @@ function Index() {
           {
             htmlFor: "url",
             className: "block mb-2 text-sm text-gray-900 font-semibold",
-            children: "Your url"
+            children: "Url a escanear"
           }
         ),
         /* @__PURE__ */ jsx(
@@ -643,7 +643,7 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: Index,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-bQwDtWjH.js", "imports": ["/assets/index-BL1rH8C1.js", "/assets/components-DG95zyRV.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-B2CFtcPJ.js", "imports": ["/assets/index-BL1rH8C1.js", "/assets/components-DG95zyRV.js"], "css": [] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-BvZn61SG.js", "imports": ["/assets/index-BL1rH8C1.js"], "css": [] } }, "url": "/assets/manifest-b7c151b8.js", "version": "b7c151b8" };
+const serverManifest = { "entry": { "module": "/assets/entry.client-bQwDtWjH.js", "imports": ["/assets/index-BL1rH8C1.js", "/assets/components-DG95zyRV.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-B2CFtcPJ.js", "imports": ["/assets/index-BL1rH8C1.js", "/assets/components-DG95zyRV.js"], "css": [] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-BNhezY_z.js", "imports": ["/assets/index-BL1rH8C1.js"], "css": [] } }, "url": "/assets/manifest-ac09b4fc.js", "version": "ac09b4fc" };
 const mode = "production";
 const assetsBuildDirectory = "build/client";
 const basename = "/";
