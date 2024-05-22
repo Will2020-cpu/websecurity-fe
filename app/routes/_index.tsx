@@ -9,7 +9,7 @@ import { Alert, Snackbar } from "@mui/material";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Websecurity" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
