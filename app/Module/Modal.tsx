@@ -7,6 +7,7 @@ type Props = {
   modal: boolean;
   sizeWidthPorcentage: number;
   sizeHeightPorcentage: number;
+  disabledCloseModal?: boolean;
 };
 
 export default function ModalModule({
@@ -15,13 +16,22 @@ export default function ModalModule({
   children,
   sizeHeightPorcentage,
   sizeWidthPorcentage,
+  disabledCloseModal
 }: Props) {
+  const handleClose = () => {
+    if (!disabledCloseModal) {
+      setModal(false);
+    }
+  };
   return (
     <Modal
       open={modal}
       onClose={() => setModal((prev) => !prev)}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      disableAutoFocus={disabledCloseModal}
+      disableEscapeKeyDown={disabledCloseModal}
+      BackdropProps={{ onClick: handleClose }}
       sx={{
         display: "flex",
         justifyContent: "center",

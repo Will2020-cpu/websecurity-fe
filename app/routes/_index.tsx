@@ -5,6 +5,7 @@ import ModalModule from "~/Module/Modal";
 import Result from "~/containers/home/components/Result";
 import { Response } from "~/domain/Response";
 import { useState } from "react";
+import { Alert, Snackbar } from "@mui/material";
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,7 +16,9 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const [url, setUrl] = useState<string>("");
-  const { handleSubmit, modal, setModal, response } = useHookScanner({ url });
+  const { handleSubmit, modal, setModal, response, error, loading } = useHookScanner({
+    url,
+  });
   return (
     <div className="h-screen w-full p-60">
       <div className="flex justify-between content-center w-full">
@@ -47,7 +50,7 @@ export default function Index() {
             <input
               type="submit"
               className="color mt-2 text-sky-900 p-2 rounded-lg text-sm w-full"
-              value="Escanear"
+              value="Scan"
             />
           </form>
         </div>
@@ -57,9 +60,19 @@ export default function Index() {
         setModal={setModal}
         sizeHeightPorcentage={80}
         sizeWidthPorcentage={80}
+        disabledCloseModal={modal ? loading : false}
       >
         <Result response={response as Response} />
       </ModalModule>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={error}
+        onClose={() => {}}
+      >
+        <Alert variant="filled" severity="error">
+         Error
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
