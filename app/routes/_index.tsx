@@ -33,7 +33,7 @@ export default function Index() {
               htmlFor="url"
               className="block mb-2 text-sm text-gray-900 font-semibold"
             >
-              Your url
+              Url a escanear
             </label>
             <input
               type="url"
