@@ -7,10 +7,10 @@ type Props = {
 };
 export default function useHookScanner({ url }: Props) {
   const [modal, setModal] = useState<boolean>(false);
-  const { fetchPost, response } = UseFetchPost<Response, any>();
+  const { fetchPost, response, error, loading } = UseFetchPost<Response>({setModal});
 
   //add e for event the form
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setModal(true);
     console.log(url);
@@ -18,5 +18,5 @@ export default function useHookScanner({ url }: Props) {
       web: url,
     });
   }
-  return { handleSubmit, setModal, modal, response };
+  return { handleSubmit, setModal, modal, response, error, loading };
 }
