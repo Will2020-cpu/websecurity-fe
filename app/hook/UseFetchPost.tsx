@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from "react";
-
+import dataJson from "../containers/mock/data.json";
 type Props = {
   setModal: Dispatch<SetStateAction<boolean>>;
 };
@@ -26,13 +26,8 @@ const UseFetchPost = <T,>({ setModal }: Props) => {
         console.log(res);
         setResponse(res);
       })
-      .catch((err) => {
-        console.log({ err });
-        setError(true);
-        setModal(false);
-        setTimeout(() => {
-          setError(false);
-        }, 5000);
+      .catch(() => {
+        setResponse(dataJson as T);
       })
       .finally(() => setLoading(false));
   }
@@ -41,7 +36,7 @@ const UseFetchPost = <T,>({ setModal }: Props) => {
     fetchPost,
     response,
     error,
-    loading
+    loading,
   };
 };
 
